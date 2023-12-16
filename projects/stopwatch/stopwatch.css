@@ -1,0 +1,129 @@
+:root {
+  --fs-800: 60px;
+  --fs-700: 30px;
+  --fs-600: 20px;
+  --fs-550: 18px;
+  --fs-500: 15px;
+  --fs-400: 12px;
+
+  --fw-800: 800;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-500: 500;
+
+  --ff-primary: "Poppins";
+  --ff-secondary: "Roboto";
+
+  --primary-clr: #000;
+  --secondary-clr: #fff;
+  --primary-clr-100: #00000000;
+  --primary-clr-500: #00000080;
+  --secondary-clr-500: #ffffff93;
+  --accent: #ffd105;
+  --accent-100: #ffd10549;
+  --accent-900: #ffd105c0;
+
+  --fs-header: var(--fs-800);
+  --fs-subheader: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-btn: var(--fs-550s);
+  --fs-body: var(--fs-500);
+
+  --fw-header: var(--fw-800);
+  --fw-subheader: var(--fw-700);
+  --fw-nav: var(--fw-600);
+  --fw-btn: var(--fw-500);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida sans", sans-serif;
+}
+body {
+  background: #000;
+  color: #fff;
+}
+header {
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  padding: 20px 40px;
+  position: relative;
+}
+.container > h1 {
+  text-align: center;
+  padding-top: 80px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+  color: var(--secondary-clr);
+  text-decoration: none;
+}
+.logo {
+  width: 140px;
+  font-size: var(--fs-subheader);
+  color: var(--secondary-clr);
+}
+.logo span {
+  color: var(--accent);
+}
+.stopwatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: var(--accent);
+  border-radius: 60px;
+}
+.display {
+  background: var(--secondary-clr);
+  color: var(--primary-clr);
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.split-time {
+  background: var(--secondary-clr-500);
+  color: var(--primary-clr-500);
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 0;
+}
+.buttons button {
+  background: var(--primary-clr);
+  color: var(--secondary-clr);
+  padding: 10px;
+  margin: 0 5px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px var(--secondary-clr);
+}
+.buttons button:hover {
+  box-shadow: none;
+}
+.buttons button:nth-child(2) {
+  color: var(--accent);
+  padding: 10px;
+  border-radius: 10px;
+}
+@media (max-width: 50em) {
+  .stopwatch {
+    width: 30%;
+    padding: 50px;
+  }
+}

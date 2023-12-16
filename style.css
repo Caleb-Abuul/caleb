@@ -1,0 +1,221 @@
+/* custom styles */
+:root {
+  --fs-800: 60px;
+  --fs-700: 30px;
+  --fs-600: 20px;
+  --fs-550: 18px;
+  --fs-500: 15px;
+  --fs-400: 12px;
+
+  --fw-800: 800;
+  --fw-700: 700;
+  --fw-600: 600;
+  --fw-500: 500;
+
+  --ff-primary: "Poppins";
+  --ff-secondary: "Roboto";
+
+  --primary-clr: #000;
+  --secondary-clr: #fff;
+  --primary-clr-100: #00000000;
+  --primary-clr-500: #00000080;
+  --secondary-clr-500: #ffffff93;
+  --accent: #ffd105;
+  --accent-100: #ffd10549;
+  --accent-900: #ffd105c0;
+
+  --fs-header: var(--fs-800);
+  --fs-subheader: var(--fs-700);
+  --fs-nav: var(--fs-500);
+  --fs-btn: var(--fs-550s);
+  --fs-body: var(--fs-500);
+
+  --fw-header: var(--fw-800);
+  --fw-subheader: var(--fw-700);
+  --fw-nav: var(--fw-600);
+  --fw-btn: var(--fw-500);
+}
+
+/* utility classes */
+.subheader {
+  font-size: var(--fs-subheader);
+  font-weight: var(--fw-header);
+  color: var(--accent-900);
+}
+.nav-link {
+  font-size: var(--fs-nav);
+  font-weight: var(--fw-nav);
+  color: var(--secondary-clr);
+}
+.btn {
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-btn);
+  background: var(--accent);
+  padding: 20px 20px;
+  line-height: 0;
+  border: none;
+  outline: none;
+  border-radius: 100vmax;
+  cursor: pointer;
+  transition: 0.5ss;
+}
+.btn:hover {
+  background: var(--secondary-clr);
+  color: var(--primary-clr);
+}
+
+/* manual styling */
+#header {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(assets/images/cover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  padding: 10px 40px;
+  position: relative;
+}
+.container a {
+  text-decoration: none;
+  color: var(--secondary-clr);
+}
+.logo {
+  width: 140px;
+  font-size: var(--fs-subheader);
+}
+.logo span {
+  color: var(--accent);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links ul li {
+  display: inline-block;
+  margin-right: 30px;
+  position: relative;
+}
+.nav-links ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  background: var(--accent);
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li a:hover::after {
+  width: 100%;
+}
+.intro {
+  width: 60%;
+  height: 300px;
+  margin-top: 200px;
+  color: var(--secondary-clr);
+}
+.intro-text span {
+  color: var(--accent);
+}
+/* projects */
+.p-header {
+  background: var(--primary-clr);
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.project {
+  margin-top: 100px;
+  width: 100%;
+  color: var(--secondary-clr);
+}
+.project img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid var(--secondary-clr-500);
+}
+.row {
+  display: flex;
+  align-items: flex-start;
+}
+.project-col {
+  flex-basis: 45%;
+  margin-right: 20px;
+}
+.project-col .see-more-btn {
+  color: var(--accent);
+  padding-top: 40px;
+  margin-top: 40px;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida sans", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
