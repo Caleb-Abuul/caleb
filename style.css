@@ -149,8 +149,6 @@
 }
 .project-col .see-more-btn {
   color: var(--accent);
-  padding-top: 40px;
-  margin-top: 40px;
 }
 
 /* Box sizing rules */
@@ -217,5 +215,19 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 50em) {
+  #header {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  .nav-links ul li a {
+    color: var(--primary-clr);
   }
 }
