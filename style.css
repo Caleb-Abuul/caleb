@@ -35,18 +35,17 @@
   --fw-nav: var(--fw-600);
   --fw-btn: var(--fw-500);
 }
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Lucida Sans", sans-serif;
+}
+body {
+  height: 100vh;
+}
 
 /* utility classes */
-.subheader {
-  font-size: var(--fs-subheader);
-  font-weight: var(--fw-header);
-  color: var(--accent-900);
-}
-.nav-link {
-  font-size: var(--fs-nav);
-  font-weight: var(--fw-nav);
-  color: var(--secondary-clr);
-}
+
 .btn {
   font-size: var(--fs-btn);
   font-weight: var(--fw-btn);
@@ -151,83 +150,67 @@
   color: var(--accent);
 }
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin */
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Lucida sans", sans-serif;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
+@media screen and (max-width: 50em) {
+  body {
+    background: var(--secondary-clr);
   }
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-@media (max-width: 50em) {
   #header {
     width: 100%;
     height: 100%;
-    background-size: contain;
-    background-position: center;
+    background-image: none;
+    position: relative;
+  }
+  .intro {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    padding: auto 40px;
+    width: 100%;
+    background-image: url(assets/images/cover.png);
+    background-size: cover;
     background-repeat: no-repeat;
-    overflow: hidden;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .intro .wrap {
+    width: 50%;
+    margin-left: 40px;
+  }
+  .intro .wrap h1 {
+    font-size: var(--fs-subheader);
+    margin: 10px 0;
+  }
+  .intro .wrap p {
+    margin: 5px 0;
   }
   .nav-links ul li a {
     color: var(--primary-clr);
+  }
+  .nav-links .logo {
+    color: var(--primary-clr);
+  }
+  .nav-links ul {
+    background: var(--accent);
+    width: 200px;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+  }
+  .nav-links ul li {
+    display: block;
+    margin: 40px;
+  }
+  .btn {
+    position: fixed;
+    margin-top: 85%;
+  }
+
+  /* projects */
+  .p-header {
+    color: var(--secondary-clr);
   }
 }
