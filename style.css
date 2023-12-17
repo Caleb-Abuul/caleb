@@ -39,9 +39,13 @@
   padding: 0;
   margin: 0;
   font-family: "Lucida Sans", sans-serif;
+  box-sizing: border-box;
 }
-body {
-  height: 100vh;
+body,
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* utility classes */
@@ -158,7 +162,7 @@ body {
 @media screen and (max-width: 50em) {
   body {
     background: var(--secondary-clr);
-    overflow-x: hidden;
+    overflow: hidden;
   }
   #header {
     width: 100%;
@@ -215,7 +219,6 @@ body {
   .btn {
     margin-top: 500px;
   }
-
   .p-header {
     color: var(--secondary-clr);
   }
