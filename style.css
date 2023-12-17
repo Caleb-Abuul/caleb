@@ -56,11 +56,10 @@ body {
   outline: none;
   border-radius: 100vmax;
   cursor: pointer;
-  transition: 0.5ss;
+  transition: ease-in-out 0.8s;
 }
 .btn:hover {
-  background: var(--secondary-clr);
-  color: var(--primary-clr);
+  background: var(--accent-900);
 }
 
 /* manual styling */
@@ -106,7 +105,7 @@ body {
   bottom: -6px;
   background: var(--accent);
   margin: auto;
-  transition: 0.5s;
+  transition: ease-in-out 0.8s;
 }
 .nav-links ul li a:hover::after {
   width: 100%;
@@ -120,7 +119,9 @@ body {
 .intro-text span {
   color: var(--accent);
 }
+
 /* projects */
+
 .p-header {
   background: var(--primary-clr);
   height: 100vh;
@@ -149,10 +150,15 @@ body {
 .project-col .see-more-btn {
   color: var(--accent);
 }
+.close,
+.menu {
+  display: none;
+}
 
 @media screen and (max-width: 50em) {
   body {
     background: var(--secondary-clr);
+    overflow-x: hidden;
   }
   #header {
     width: 100%;
@@ -197,20 +203,25 @@ body {
     height: 100vh;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -200px;
     z-index: 100;
+    transition: ease-in-out 0.8s;
   }
   .nav-links ul li {
     display: block;
-    margin: 40px;
+    margin: 20px 0 40px 20px;
+    cursor: pointer;
   }
   .btn {
-    position: fixed;
-    margin-top: 85%;
+    margin-top: 500px;
   }
 
-  /* projects */
   .p-header {
     color: var(--secondary-clr);
+  }
+  .close,
+  .menu {
+    display: block;
+    cursor: pointer;
   }
 }
