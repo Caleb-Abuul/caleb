@@ -160,9 +160,12 @@ html {
 }
 
 @media screen and (max-width: 50em) {
-  body {
+  body,
+  html {
     background: var(--secondary-clr);
     overflow: hidden;
+    height: 100%;
+    width: 100%;
   }
   #header {
     width: 100%;
