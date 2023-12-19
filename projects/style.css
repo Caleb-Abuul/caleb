@@ -40,6 +40,7 @@
   font-family: "Lucida sans", sans-serif;
 }
 body {
+  width: 100%;
   background: #000;
   color: #fff;
 }
@@ -128,4 +129,76 @@ nav a {
     width: 30%;
     padding: 50px;
   }
+}
+
+/* Tic Tac Toes */
+
+.wrapper {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+.wrapper hr {
+  width: 450px;
+  margin: auto;
+}
+#board {
+  width: 450px;
+  height: 450px;
+  background: var(--accent-100);
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.score {
+  width: 450px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.score h1 {
+  color: var(--secondary-clr);
+  margin-bottom: 10px;
+}
+.tile {
+  width: 149px;
+  height: 149px;
+  font-size: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-clr);
+  cursor: pointer;
+}
+.horizontal-line {
+  border-bottom: 1px solid var(--secondary-clr);
+}
+.vertical-line {
+  border-right: 1px solid var(--secondary-clr);
+}
+.winner {
+  background: var(--accent);
+  color: var(--secondary-clr);
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  margin: 0 auto;
+}
+.btns button {
+  padding: 5px 20px;
+  border-radius: 100vmax;
+  background: var(--accent);
+  border: none;
+  outline: none;
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-btn);
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+}
+.btns button:hover {
+  background: var(--accent-900);
 }

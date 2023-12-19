@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>caleb/projects/stopwatch</title>
+    <title>caleb/projects/TicTacToe</title>
     <link rel="stylesheet" href="../style.css" />
-    <script src="stopwatch.js" defer></script>
+    <script src="tictactoe.js" defer></script>
   </head>
   <body>
     <header>
@@ -17,14 +17,19 @@
           >
           <a href="../projects.html">Back</a>
         </nav>
-        <h1>Stopwatch</h1>
-        <div class="stopwatch">
-          <div id="split-output"></div>
-          <h1 id="display" class="display">00:00:00</h1>
-          <div class="buttons">
-            <button id="reset">Reset</button>
-            <button id="start">Start</button>
-            <button id="split">Split</button>
+        <hr />
+        <div class="wrapper">
+          <h1>Tic Tac Toe</h1>
+          <hr />
+          <div id="board"></div>
+          <div class="score">
+            <h1 class="playerO">PlayerO: <span id="playerO">0</span></h1>
+
+            <h1 class="playerX">PlayerX: <span id="playerX">0</span></h1>
+          </div>
+          <div class="btns">
+            <button id="reset-btn">Reset</button>
+            <button id="replay-btn">Replay</button>
           </div>
         </div>
       </div>
