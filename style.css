@@ -38,7 +38,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Lucida Sans", sans-serif;
+  font-family: var(--ff-primary), sans-serif;
   box-sizing: border-box;
 }
 body {
@@ -94,6 +94,7 @@ section {
   padding: 0.5rem 3rem;
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
@@ -101,6 +102,11 @@ section {
 }
 .container.intro-container {
   border-bottom: none;
+}
+.my-projects {
+  margin: 2rem 0;
+  font-weight: var(--fw-subheader);
+  border-bottom: 2px solid var(--accent);
 }
 .intro {
   height: 20rem;
@@ -169,6 +175,38 @@ section {
 .fa-solid.fa-bars {
   z-index: 100;
   color: var(--secondary-clr);
+}
+.aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100vh;
+  background: var(--accent);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0.75rem;
+  transition: 0.8s ease-in-out;
+}
+.aside i {
+  display: block;
+  margin: 0.75rem 0 1.5rem;
+  color: var(--primary-clr);
+  cursor: pointer;
+}
+.aside .social-links {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+.aside .social-links i {
+  margin-right: 1.25rem;
+  cursor: pointer;
+}
+.aside a {
+  text-decoration: none;
+  color: var(--primary-clr);
 }
 
 /* projects */

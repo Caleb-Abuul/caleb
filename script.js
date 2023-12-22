@@ -1,8 +1,11 @@
-let navLinks = document.getElementById('nav-links');
+let openMenu = document.getElementById('menu');
+let closeMenu = document.getElementById('close');
+let asideNav = document.getElementById('aside');
 
-function openMenu(){
-    navLinks.style.right = '0px';
-}
-function closeMenu(){
-    navLinks.style.right = '-200px';
-}
+openMenu.addEventListener('click', ()=>{
+    asideNav.style.right = '0';
+})
+
+closeMenu.addEventListener('click', ()=>{
+    asideNav.style.right = '-200px';
+})
