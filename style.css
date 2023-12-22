@@ -166,6 +166,10 @@ section {
   height: 18.75rem;
   margin: 1rem 0;
 }
+.fa-solid.fa-bars {
+  z-index: 100;
+  color: var(--secondary-clr);
+}
 
 /* projects */
 
