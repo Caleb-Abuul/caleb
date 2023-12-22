@@ -19,41 +19,51 @@
 
   </head>
   <body>
-    <header id="header">
+    <header class="header">
       <div class="container">
-        <nav class="nav-links">
+        <div class="wrapper">
           <a href="index.html"
             ><h1 class="logo"><span>C</span>aleb</h1></a
           >
-          <div id="primary-links">
-            <ul role="list" class="list-inline" id="nav-links">
-              <li><h3 class="close" onclick="closeMenu()">X</h3></li>
-              <li><a href="projects/projects.html">Projects</a></li>
-              <li><a href="services/services.html">Services</a></li>
-              <li><a href="#">About me</a></li>
-              <li><a href="#">Contact me</a></li>
-            </ul>
-            <h3 class="menu" onclick="openMenu()">=</h3>
-          </div>
-
-        </nav>
-
-        <div class="intro">
-          <div class="wrap">
-            <h1 class="subheader">Junior Frontend Developer</h1>
-            <p>Hi there!</p>
-            <p class="intro-text">
-              My name is <span>Caleb</span>. I am a Junior Frontend web
-              developer, a graphics designer, and a Microbiologist by
-              profession.
-            </p>
-          </div>
-        </div>
-        
-        <div>
-          <button class="btn">Download my CV</button>
+          <nav class="nav-links">
+            <i class="fa fa-menu"></i>
+          </nav>
         </div>
       </div>
     </header>
+    <section class="intro-section">
+      <div class="container">
+        <div class="intro">
+          <h4 class="intro-text">
+            A goal-oriented young professional with over 3 years of teaching experience, a great passion for impacting lives positively, and tenacity to persist in the face of difficulty. My proficiency in Microsoft packages such as Excel, Word and PowerPoint coupled with a good knowledge of programming languages such as Python, HTML, CSS and JavaScript gives me an egde in the comtemporary era of data and technology. I am seeking opportunities to leverage my unique experiences and skills.
+          </h4>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Microbiology Quiz App</h2>
+            <img src="assets/images/quiz.png" alt="">
+            <p>How well do you know Microbiology? Test your microbiological knowledge with this intriguing Microbiology quiz made for Microbiologists and for the love of Microbiology. This quiz covers the basic as well as advanced concepts in Microbiology</p>
+            <div id="btn">
+              <a href="projects/QuizApp/main.html" class="btn">View Project</a>
+            </div>
+            
+          </div>
+          <div class="col">
+            <h2>Weather generation app</h2>
+            <img src="assets/images/cloud.png" alt="">
+            <p>Wondering whether the weather might disrupt your business meetings? or perhaps your wedding? Take a sneak peak into the thick tapestry of the cloud to uncover useful insights so as to align yourself with the weather's schedules.</p>
+            <div id="btn">
+              <a href="#" class="btn">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
   </body>
 </html>
