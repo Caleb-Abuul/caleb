@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+.padding {
+  margin: 0.5rem 0;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #fde403;
+  padding: 0.5rem 2.5rem;
+}
+.wrapper {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  color: #fff;
+  font-weight: 900;
+}
+.logo span {
+  color: #000;
+}
+.nav-links {
+  display: flex;
+  color: #fff;
+  position: relative;
+  text-align: right;
+}
+.nav-links ul li {
+  display: inline-block;
+  list-style: none;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.nav-links ul li a:hover {
+  color: #444;
+}
+.container {
+  width: 60%;
+  margin: 2.5rem auto;
+  padding: 50px 40px;
+}
+#options {
+  display: flex;
+  flex-direction: column;
+}
+.btn {
+  padding: 10px 20px;
+  border-radius: 100vmax;
+  font-size: 18px;
+  text-align: left;
+  border: none;
+  outline: none;
+  margin: 10px 0;
+  color: #000;
+  background-color: #fff;
+}
+.btn:not([disabled]):hover {
+  background-color: #aaa;
+}
+.btn:disabled {
+  cursor: no-drop;
+}
+.nav-btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+.nav-btns button {
+  padding: 15px 0;
+  font-size: 16px;
+  width: 100px;
+  border-radius: 100vmax;
+  outline: none;
+  border: none;
+  background-color: #fab905;
+  line-height: 0;
+  cursor: pointer;
+}
+.nav-btns button:hover {
+  background-color: #fab905a4;
+}
+.correct {
+  background-color: #0f0;
+  color: #fff;
+}
+.incorrect {
+  background-color: #f00;
+  color: #fff;
+}
+#current-question-number {
+  color: #fab905;
+}
