@@ -181,7 +181,7 @@ section {
   color: var(--secondary-clr);
 }
 .aside {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -200px;
   width: 200px;
