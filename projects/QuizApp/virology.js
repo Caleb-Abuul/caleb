@@ -32,7 +32,7 @@ let questions = [
         question: 'What is the outer protein coat of a virus called?',
         answers: [
             {text: 'Capsid', correct: true},
-            {text: 'Envelope', correct: true},
+            {text: 'Envelope', correct: false},
             {text: 'Matrix', correct: false},
             {text: 'Nucleocapsid', correct: false},
         ]
