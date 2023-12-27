@@ -247,6 +247,7 @@ function selectAnswer(e){
     nextBtn.style.display = 'block';
     preBtn.style.display = 'block';
 }
+
 nextBtn.addEventListener('click', ()=>{
     prevScore = score;
     currentQuestionIndex++;
@@ -257,6 +258,7 @@ nextBtn.addEventListener('click', ()=>{
         currentQuestionNumber.innerHTML = ' ';
         showScore();
     }
+    console.log(scoreArray);
 })
 
 function showScore(){
@@ -277,18 +279,41 @@ restartBtn.addEventListener('click', ()=>{
     startQuiz();
 })
 
-preBtn.addEventListener('click', ()=>{
+preBtn.addEventListener('click', previousQuestion);
+
+function previousQuestion(){
     if (currentQuestionIndex <= 0){
         alert('Cannot go back beyond the first question!');
         return
-    } else{
-        scoreArray.pop();
-        scoreArray.pop();
+    } else if (scoreArray.length == 0){
         currentQuestionIndex--;
         currentQuestionNumber.innerHTML = (currentQuestionIndex + 1) + '/' + questions.length;
         
         showQuestion();
+        return;
+    } else{
+        if (currentQuestionIndex == scoreArray.length){
+            scoreArray.pop();
+
+            currentQuestionIndex--;
+            currentQuestionNumber.innerHTML = (currentQuestionIndex + 1) + '/' + questions.length;
+        
+            showQuestion();
+        } else if (currentQuestionIndex > scoreArray.length){
+            currentQuestionIndex--;
+            currentQuestionNumber.innerHTML = (currentQuestionIndex + 1) + '/' + questions.length;
+        
+            showQuestion();
+        } else{
+            scoreArray.pop();
+            scoreArray.pop();
+            currentQuestionIndex--;
+            currentQuestionNumber.innerHTML = (currentQuestionIndex + 1) + '/' + questions.length;
+        
+            showQuestion();
+        }
+        
     }
-})
+}
 
 startQuiz();
