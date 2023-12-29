@@ -102,6 +102,6 @@ header {
 
 @media (max-width: 35rem) {
   .categories ul li {
-    width: 35%;
+    width: 100%;
   }
 }
