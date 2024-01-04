@@ -255,6 +255,9 @@ section {
 .left-footer {
   flex-basis: 30%;
 }
+.left-footer a {
+  text-decoration: none;
+}
 
 .middle-footer {
   flex-basis: 30%;
@@ -273,8 +276,11 @@ section {
 .right-footer {
   flex-basis: 30%;
 }
-.left-footer a {
+.contact a {
+  margin: 0 20px;
+  color: var(--secondary-clr);
   text-decoration: none;
+  float: right;
 }
 
 @keyframes fade-in {
