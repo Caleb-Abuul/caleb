@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- js -->
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section class="home" id="home">
+      <h1>Kgames</h1>
+      <div class="welcome-page">
+        <button class="btn" id="play-game">Play Game</button>
+        <button class="btn" id="instructions">Instructions</button>
+        <button class="btn" id="about">About Game</button>
+        <button class="btn" id="quit">Quit</button>
+      </div>
+    </section>
+    <section class="game" id="game">
+      <div class="close">
+        <button id="close">X</button>
+      </div>
+      <h1>Tic Tac Toe</h1>
+      <hr />
+      <br />
+
+      <!-- score board -->
+      <div class="score-board">
+        <div class="playerX">
+          <h2>PlayerX:</h2>
+          <h3 id="scoreX">0</h3>
+        </div>
+        <div class="playerO">
+          <h2>PlayerO:</h2>
+          <h3 id="scoreO">0</h3>
+        </div>
+      </div>
+
+      <!-- 3x3 -->
+      <div id="board"></div>
+
+      <!-- pop up -->
+      <div id="pop-up">
+        <div class="title">
+          <h2>Winner</h2>
+          <h3 id="winner"></h3>
+        </div>
+        <p id="random-msg"></p>
+        <div class="btns">
+          <button class="btn" id="home-btn">Home</button>
+          <button id="btn" class="btn">Play Again</button>
+          <button class="btn" id="restart">Restart</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
