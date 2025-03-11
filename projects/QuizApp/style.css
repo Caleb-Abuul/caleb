@@ -21,6 +21,9 @@ header {
   background: #fde403;
   padding: 0.5rem 2.5rem;
 }
+.home {
+  color: white;
+}
 .wrapper {
   width: 90%;
   display: flex;
