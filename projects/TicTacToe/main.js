@@ -13,6 +13,14 @@ let playGame = document.getElementById('play-game');
 let homeBtn = document.getElementById('home-btn');
 let restart = document.getElementById('restart');
 let closeBtn = document.getElementById('close');
+let instructions = document.getElementById('instructions');
+
+instructions.addEventListener('click', ()=>{
+    document.getElementById('home').style.display = 'none';
+    document.getElementById('game').style.display = 'none';
+    document.getElementById('pop-up').style.display = 'none';
+    document.getElementById('instruction').style.display = 'block';
+}
 
 playGame.addEventListener('click', ()=>{
     document.getElementById('home').style.display = 'none';
